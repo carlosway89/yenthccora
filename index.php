@@ -107,11 +107,11 @@
       <div id="page-content-wrapper">
         <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
-          <div class="row hidden-xs">
+          <div class="row hidden-xs menu-image">
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a href="#home">
-                  <div class="sub-menu active">
-                    <div id="home-link" class="text-right active padding20">
+                <a id="home" href="#home">
+                  <div class="sub-menu">
+                    <div id="home-link" class="text-right padding20">
                       <label>Home</label></br>
                       <small>Bienvenidos</small>
                     </div>                  
@@ -120,7 +120,7 @@
                 <img id="img-1" class="max-width160 unmargin img-responsive" style="display:none" src="img/20_1.jpg">
               </div>
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a href="#surfboard">
+                <a id="surfboards" href="#surfboards">
                   <div class="sub-menu">                  
                     <div id="surfboard-link" class="text-right padding20" style="display:none">
                       <label>Surfboards</label></br>
@@ -131,7 +131,7 @@
                 <img id="img-2" class="max-width160 unmargin img-responsive" style="display:none" src="img/8_1.jpg">
               </div>
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a href="#team">
+                <a id="team" href="#team">
                   <div class="sub-menu">
                     <div id="team-link" class="text-right padding20" style="display:none">
                       <label>Team</label></br>
@@ -142,9 +142,9 @@
                 <img id="img-3" class="max-width160 unmargin img-responsive" style="display:none" src="img/2_1.jpg">
               </div>
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a href="#novedades">
+                <a id="news" href="#news">
                   <div class="sub-menu">
-                    <div id="novedades-link" class="text-right padding20" style="display:none">
+                    <div id="news-link" class="text-right padding20" style="display:none">
                       <label>News</label></br>
                       <small>Novedades</small>
                     </div>
@@ -153,7 +153,7 @@
                 <img id="img-4" class="max-width160 unmargin img-responsive" style="display:none" src="img/9_1.jpg">
               </div>
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a href="#Contact">
+                <a id="contact" href="#Contact">
                   <div class="sub-menu">                  
                     <div id="contact-link" class="text-right padding20" style="display:none">
                       <label>Contact</label></br>
@@ -164,51 +164,8 @@
                 <img id="img-5" class="max-width160 unmargin img-responsive" style="display:none" src="img/11_1.jpg">
               </div>
           </div>
-          <div class="row padding100 absolute-position">
-              <div class="col-md-4">
-                <div class="content-page" >
-                  <img src="img/13.jpg" class="img-responsive">
-                  <p class="text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="content-page" >
-                  <div class="carousel slide article-slide" id="article-photo-carousel">
-
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner cont-slider">
-
-                        <div class="item active">
-                          <img alt="" title="" src="img/3.jpg">
-                        </div>
-                        <div class="item">
-                          <img alt="" title="" src="img/4.jpg">
-                        </div>
-                        <div class="item">
-                          <img alt="" title="" src="img/5.jpg">
-                        </div>
-                        <div class="item">
-                          <img alt="" title="" src="img/6.jpg">
-                        </div>
-                      </div>
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
-                          <img alt="" src="img/3.jpg">
-                        </li>
-                        <li class="" data-slide-to="1" data-target="#article-photo-carousel">
-                          <img alt="" src="img/4.jpg">
-                        </li>
-                        <li class="" data-slide-to="2" data-target="#article-photo-carousel">
-                          <img alt="" src="img/5.jpg">
-                        </li>
-                        <li class="" data-slide-to="3" data-target="#article-photo-carousel">
-                          <img alt="" src="img/6.jpg">
-                        </li>
-                      </ol>
-                    </div>
-                </div>
-              </div>
+          <div class="row padding100 absolute-position view-container" style="display:none">
+              
                           
           </div>
         </div>

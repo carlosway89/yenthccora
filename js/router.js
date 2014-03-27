@@ -1,12 +1,10 @@
 // Filename: router.js
  define([
      'beans',
-     'views/home',
      'models/parse',
      'channel'
      ], function(
         Beans,
-        Home,
         ParseModel,
         Channel
      ){
@@ -14,7 +12,11 @@
             beans: new Beans,
             debug: true,
             routes: {
-                'home': 'home',   // default page reload to home
+                'home': 'home',
+                'surfboards':'surfboards',
+                'team':'team',
+                'news':'news',
+                'contact':'contact'
             },
 
 
@@ -24,13 +26,37 @@
                  * Send a clear-last-view event to Channel, so that any view can clean
                  * up after itself
                  */
+                var that=this;
+                require(['views/home'],function(Home){
             
                     var view = new Home({
                         el: $('div.view-container')
                     });
+                });
+                setTimeout(function(){
+                    that.initial_page('home');
+                },200);
+                
 
                     
             },
+            initial_page:function(root){
+
+                
+                var content=$('div.menu-image');
+                var view=$('div.view-container');
+
+                content.find('div').removeClass('active');
+                content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active');
+
+                if(!view.is(':visible'))
+                    view.delay(300).show('drop',800);
+                else
+                    view.hide('drop',800,function(){
+                        view.delay(300).show('drop',800);    
+                    });           
+
+            }
 
 
         });
@@ -62,7 +88,7 @@
                 /**
                  * Set default route
                  */
-                if ( ! window.location.hash.length ) window.location.hash = '#home';
+                // if ( ! window.location.hash.length ) window.location.hash = '#home';
                 Backbone.history.start();
 
      };
