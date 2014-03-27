@@ -45,12 +45,15 @@
                 
                 var content=$('div.menu-image');
                 var view=$('div.view-container');
-
+                var logo=$('.logo_initial');
                 content.find('div').removeClass('active');
-                content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active');
+                content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active').show();
+                
 
-                if(!view.is(':visible'))
+                if(!view.is(':visible')){
+                    logo.addClass('logo_final');
                     view.delay(300).show('drop',800);
+                }                    
                 else
                     view.hide('drop',800,function(){
                         view.delay(300).show('drop',800);    

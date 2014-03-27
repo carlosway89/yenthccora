@@ -24,64 +24,6 @@
     <script src="js/xo.js"></script>
     <script data-main="js/main" src="js/require.js"></script>
 
-    <script>
-
-
-
-
-      
-      $().ready(function() {
-
-              $("#menu-toggle").click(function(e) {
-                    e.preventDefault();
-                    console.log('clickeado');
-                    $("#wrapper").toggleClass("active");
-              });
-              $(".subicon").tooltip();
-
-              $("#clickea").click(function(e) {
-                    e.preventDefault();
-                    $(".pruebita").show("drop",1000);
-              });
-              $('.sub-menu').hover(function(e){
-                var val=$(e.currentTarget);
-                val.find('.text-right').show();
-              },function(e){
-                var val=$(e.currentTarget);
-                var div=val.find('.text-right');
-                if(!div.hasClass('active'))
-                  div.hide();
-              });
-              for (var i = 1; i <= 5; i++) {                
-                  $('#img-'+i).delay(600*i).show('bounce',800);            
-              };
-              
-
-                // $('#wrapper').tubular({
-                //   videoId: 'EgtDwjrV8fQ',
-                //   width:100 
-                // }); 
-
-                // where idOfYourVideo is the YouTube ID.              
-
-                // ratio: 16/9 // usually either 4/3 or 16/9 -- tweak as needed
-                // videoId: 'ZCAnLxRvNNc' // toy robot in space is a good default, no?
-                // mute: true
-                // repeat: true
-                // width: $(window).width() // no need to override
-                // wrapperZIndex: 99
-                // playButtonClass: 'tubular-play'
-                // pauseButtonClass: 'tubular-pause'
-                // muteButtonClass: 'tubular-mute'
-                // volumeUpClass: 'tubular-volume-up'
-                // volumeDownClass: 'tubular-volume-down'
-                // increaseVolumeBy: 10 // increment value; volume range is 1-100
-                // start: 0 // starting position in seconds
-
-
-        });
-    </script>
-
   </head>
 
 <body>
@@ -95,10 +37,10 @@
              <li class="sidebar-brand"><a id="menu-toggle" href="javascript:void(0);">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">     
-          <li><a href="javascript:void(0);" data-toggle="tooltip" class="subicon" data-placement="right" title="Home">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
-          <li><a href="javascript:void(0);" data-toggle="tooltip" class="subicon" data-placement="right" title="Surfboards">Surfboards<span class="sub_icon glyphicon glyphicon-picture"></span></a></li>
-          <li><a href="javascript:void(0);" data-toggle="tooltip" class="subicon" data-placement="right" title="Team">Team<span class="sub_icon glyphicon glyphicon-user"></span></a></li>
-          <li><a href="javascript:void(0);" data-toggle="tooltip" class="subicon" data-placement="right" title="Contact">Contact<span class="sub_icon glyphicon glyphicon-envelope"></span></a></li>
+          <li><a href="#home" data-toggle="tooltip" class="subicon" data-placement="right" title="Home">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
+          <li><a href="#surfboards" data-toggle="tooltip" class="subicon" data-placement="right" title="Surfboards">Surfboards<span class="sub_icon glyphicon glyphicon-picture"></span></a></li>
+          <li><a href="#team" data-toggle="tooltip" class="subicon" data-placement="right" title="Team">Team<span class="sub_icon glyphicon glyphicon-user"></span></a></li>
+          <li><a href="#contact" data-toggle="tooltip" class="subicon" data-placement="right" title="Contact">Contact<span class="sub_icon glyphicon glyphicon-envelope"></span></a></li>
           
         </ul>
       </div>
@@ -111,7 +53,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="home" href="#home">
                   <div class="sub-menu">
-                    <div id="home-link" class="text-right padding20">
+                    <div id="home-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Home</label></br>
                       <small>Bienvenidos</small>
                     </div>                  
@@ -122,7 +64,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="surfboards" href="#surfboards">
                   <div class="sub-menu">                  
-                    <div id="surfboard-link" class="text-right padding20" style="display:none">
+                    <div id="surfboard-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Surfboards</label></br>
                       <small>Tablas de Surf</small>
                     </div>  
@@ -133,7 +75,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="team" href="#team">
                   <div class="sub-menu">
-                    <div id="team-link" class="text-right padding20" style="display:none">
+                    <div id="team-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Team</label></br>
                       <small>Equipo</small>
                     </div>
@@ -144,7 +86,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="news" href="#news">
                   <div class="sub-menu">
-                    <div id="news-link" class="text-right padding20" style="display:none">
+                    <div id="news-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>News</label></br>
                       <small>Novedades</small>
                     </div>
@@ -155,7 +97,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="contact" href="#Contact">
                   <div class="sub-menu">                  
-                    <div id="contact-link" class="text-right padding20" style="display:none">
+                    <div id="contact-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Contact</label></br>
                       <small>Contacto</small>
                     </div>
@@ -163,6 +105,9 @@
                 </a>
                 <img id="img-5" class="max-width160 unmargin img-responsive" style="display:none" src="img/11_1.jpg">
               </div>
+          </div>
+          <div class="logo_initial" style="display:none">
+            <img src="img/word_yc.png">
           </div>
           <div class="row padding100 absolute-position view-container" style="display:none">
               

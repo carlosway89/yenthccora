@@ -1,5 +1,5 @@
 define([
-    'text!/yenthccora/templates/home.php',
+    'text!/templates/home.php',
     'beans',
     'collections/parse',
     'models/parse',
