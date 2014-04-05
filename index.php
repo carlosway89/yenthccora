@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
+    <title>Yenth Ccora Surfboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
@@ -34,7 +35,7 @@
       <!-- Sidebar -->
       <div id="sidebar-wrapper">
         <ul id="sidebar_menu" class="sidebar-nav">
-             <li class="sidebar-brand"><a id="menu-toggle" href="javascript:void(0);">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+             <li class="sidebar-brand"><a id="menu-toggle" href="javascript:void(0);">Menu<span id="main_icon" class="fa fa-bars fa-lg "></span></a></li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">     
           <li><a href="#home" data-toggle="tooltip" class="subicon" data-placement="right" title="Home">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
@@ -49,7 +50,7 @@
       <div id="page-content-wrapper">
         <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
-          <div class="row hidden-xs menu-image">
+          <div class="row hidden-xs hidden-sm menu-image">
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="home" href="#home">
                   <div class="sub-menu">
@@ -64,7 +65,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
                 <a id="surfboards" href="#surfboards">
                   <div class="sub-menu">                  
-                    <div id="surfboard-link" class="text-right padding20 paddingTop50" style="display:none">
+                    <div id="surfboards-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Surfboards</label></br>
                       <small>Tablas de Surf</small>
                     </div>  
@@ -95,7 +96,7 @@
                 <img id="img-4" class="max-width160 unmargin img-responsive" style="display:none" src="img/9_1.jpg">
               </div>
               <div class="col-md-2 col-sm-2 col-xs-12 col-5">
-                <a id="contact" href="#Contact">
+                <a id="contact" href="#contact">
                   <div class="sub-menu">                  
                     <div id="contact-link" class="text-right padding20 paddingTop50" style="display:none">
                       <label>Contact</label></br>

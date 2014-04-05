@@ -1,9 +1,11 @@
 <div class="col-md-4">
 	    <div class="content-page content-page-dark" >
 	      <img src="img/13.jpg" class="img-responsive">
-	      <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+	      <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book rd dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookrd dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
 	    </div>
+	    <br>
 </div>
+
 <div class="col-md-8">
 	    <div class="content-page content-page-dark" >
 	      <div class="carousel slide article-slide" id="article-photo-carousel">

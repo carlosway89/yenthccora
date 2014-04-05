@@ -1,7 +1,7 @@
 /********** PARSE API ACCESS CREDENTIALS **********/
 
-var application_id = "3M2CeciSh31cERvK8OhYFzNnWZEAx5NL6X8hmZ6J";
-var rest_api_key = "idSIqXKZ6FGj2OmLaKf4zon7arSmscqx2u1pinnW";
+var application_id = "4uoy5CdUu1d8U0v6CJLpEqi26HWRVGJOMVhFALw2";
+var rest_api_key = "9s03XNTsAYBAII3K8BPu0lYPjezOn96fCMzhhySq";
 var api_version = "1";
 
 /******************* END *************************/
@@ -162,7 +162,7 @@ var api_version = "1";
         if ( model._where ){
 
             data = (data && data.length)?data+'&where='+JSON.stringify(model._where):'where='+JSON.stringify(model._where);
-        } 
+        }
 
         if (model._startsWith){
 

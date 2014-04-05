@@ -22,29 +22,105 @@
 
             home: function(){
 
-                /**
-                 * Send a clear-last-view event to Channel, so that any view can clean
-                 * up after itself
-                 */
+
                 var that=this;
+                setTimeout(function(){
+                    that.initial_page('home');
+                },200);
+
                 require(['views/home'],function(Home){
             
                     var view = new Home({
                         el: $('div.view-container')
                     });
                 });
-                setTimeout(function(){
-                    that.initial_page('home');
-                },200);
+                
                 
 
                     
             },
+            surfboards: function(){
+
+
+                var that=this;
+
+                setTimeout(function(){
+                    that.initial_page('surfboards');
+                },200);
+
+                require(['views/surfboards'],function(Surfboards){
+            
+                    var view = new Surfboards({
+                        el: $('div.view-container')
+                    });
+                });
+                
+                
+
+                    
+            },
+            team: function(){
+
+
+                var that=this;
+                setTimeout(function(){
+                    that.initial_page('team');
+                },200);
+
+                require(['views/team'],function(Team){
+            
+                    var view = new Team({
+                        el: $('div.view-container')
+                    });
+                });
+                
+                
+
+                    
+            },
+            news: function(){
+
+
+                var that=this;
+                setTimeout(function(){
+                    that.initial_page('news');
+                },200);
+
+                require(['views/news'],function(News){
+            
+                    var view = new News({
+                        el: $('div.view-container')
+                    });
+                });
+                
+                
+
+                    
+            },
+            contact: function(){
+
+
+                var that=this;
+                setTimeout(function(){
+                    that.initial_page('contact');
+                },200);
+                require(['views/contact'],function(Contact){
+            
+                    var view = new Contact({
+                        el: $('div.view-container')
+                    });
+                });
+                
+                
+
+                    
+            },            
             initial_page:function(root){
 
                 
                 var content=$('div.menu-image');
                 var view=$('div.view-container');
+                
                 var logo=$('.logo_initial');
                 content.find('div').removeClass('active');
                 content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active').show();
