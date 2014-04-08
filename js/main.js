@@ -14,7 +14,7 @@ require.onError = function (err) {
 require.config({
     urlArgs: "bust=" + (new Date()).getTime(),
     waitSeconds: 30,
-    baseUrl: 'js',
+    baseUrl: '/js',
     paths: {
     }
 });

@@ -56,6 +56,12 @@ define([
             });
         };
         /**
+         *
+         * @returns {boolean} true if user currently logged in
+         */
+        this.is_logged_in = function(){  return !! Parse.User.current(); };
+
+        /**
          * Show a User Alert
          * @param type
          * @param root
@@ -66,9 +72,10 @@ define([
             // remove existing
             if ( root.children().length )
                 root.children().remove();
+            
             switch ( type ){
                 case 'success':
-                    require(['views/alert-success'],function(AlertSuccess){
+                    require(['views/alerts/alert-success'],function(AlertSuccess){
                         view = new AlertSuccess({
                             message: message
                         });
@@ -76,7 +83,7 @@ define([
                     });
                 break;
                 case 'error':
-                    require(['views/alert-error'],function(AlertError){
+                    require(['views/alerts/alert-error'],function(AlertError){
                         view = new AlertError({
                             message: message
                         });
@@ -86,7 +93,7 @@ define([
                     });
                 break;    
                 case 'info':
-                require(['views/alert-info'],function(AlertInfo){
+                require(['views/alerts/alert-info'],function(AlertInfo){
                     view = new AlertInfo({
                         message: message
                     });
@@ -96,7 +103,7 @@ define([
                 });
                 break;
                 case 'warning':
-                require(['views/alert-info'],function(AlertWarning){
+                require(['views/alerts/alert-warning'],function(AlertWarning){
                     view = new AlertWarning({
                         message: message
                     });

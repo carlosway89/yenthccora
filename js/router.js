@@ -16,7 +16,9 @@
                 'surfboards':'surfboards',
                 'team':'team',
                 'news':'news',
-                'contact':'contact'
+                'contact':'contact',
+                'admin':'admin',
+                'login':'login'
             },
 
 
@@ -24,9 +26,9 @@
 
 
                 var that=this;
-                setTimeout(function(){
-                    that.initial_page('home');
-                },200);
+                
+                that.initial_page('home');
+                
 
                 require(['views/home'],function(Home){
             
@@ -44,9 +46,9 @@
 
                 var that=this;
 
-                setTimeout(function(){
-                    that.initial_page('surfboards');
-                },200);
+                
+                that.initial_page('surfboards');
+                
 
                 require(['views/surfboards'],function(Surfboards){
             
@@ -63,9 +65,9 @@
 
 
                 var that=this;
-                setTimeout(function(){
-                    that.initial_page('team');
-                },200);
+                
+                that.initial_page('team');
+                
 
                 require(['views/team'],function(Team){
             
@@ -82,9 +84,9 @@
 
 
                 var that=this;
-                setTimeout(function(){
-                    that.initial_page('news');
-                },200);
+                
+                that.initial_page('news');
+                
 
                 require(['views/news'],function(News){
             
@@ -101,9 +103,9 @@
 
 
                 var that=this;
-                setTimeout(function(){
-                    that.initial_page('contact');
-                },200);
+                
+                that.initial_page('contact');
+                
                 require(['views/contact'],function(Contact){
             
                     var view = new Contact({
@@ -114,13 +116,45 @@
                 
 
                     
+            },
+            admin: function(){
+
+                /**
+                 * Send a clear-last-view event to Channel, so that any view can clean
+                 * up after itself
+                 */
+
+                require(['views/admin'],function(Admin){
+                
+                        var view = new Admin({
+                            el: $('div.content-page-admin')
+                        });
+                    });
+                
+
+                    
+            },
+            login: function(){
+
+                /**
+                 * Send a clear-last-view event to Channel, so that any view can clean
+                 * up after itself
+                 */
+                require(['views/login'],function(Login){
+            
+                    var view = new Login({
+                        el: $('div.content-page-admin')
+                    });
+                });
+                
+
+                    
             },            
             initial_page:function(root){
 
                 
                 var content=$('div.menu-image');
                 var view=$('div.view-container');
-                
                 var logo=$('.logo_initial');
                 content.find('div').removeClass('active');
                 content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active').show();
@@ -168,6 +202,7 @@
                  * Set default route
                  */
                 // if ( ! window.location.hash.length ) window.location.hash = '#home';
+                if ( window.location.pathname=='/panel/' ) window.location.hash = '#login';
                 Backbone.history.start();
 
      };
