@@ -41,6 +41,7 @@
           <li><a href="#home" data-toggle="tooltip" class="subicon" data-placement="right" title="Home">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
           <li><a href="#surfboards" data-toggle="tooltip" class="subicon" data-placement="right" title="Surfboards">Surfboards<span class="sub_icon glyphicon glyphicon-picture"></span></a></li>
           <li><a href="#team" data-toggle="tooltip" class="subicon" data-placement="right" title="Team">Team<span class="sub_icon glyphicon glyphicon-user"></span></a></li>
+          <li><a href="#news" data-toggle="tooltip" class="subicon" data-placement="right" title="Surf-Shop">Surf Shop<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
           <li><a href="#contact" data-toggle="tooltip" class="subicon" data-placement="right" title="Contact">Contact<span class="sub_icon glyphicon glyphicon-envelope"></span></a></li>
           
         </ul>
@@ -88,8 +89,8 @@
                 <a id="news" href="#news">
                   <div class="sub-menu">
                     <div id="news-link" class="text-right padding20 paddingTop50" style="display:none">
-                      <label>News</label></br>
-                      <small>Novedades</small>
+                      <label>Surf Shop</label></br>
+                      <small>Tienda de Surf</small>
                     </div>
                   </div>
                 </a>

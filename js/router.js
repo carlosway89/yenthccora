@@ -18,7 +18,8 @@
                 'news':'news',
                 'contact':'contact',
                 'admin':'admin',
-                'login':'login'
+                'login':'login',
+                'logout':'logout'
             },
 
 
@@ -123,13 +124,17 @@
                  * Send a clear-last-view event to Channel, so that any view can clean
                  * up after itself
                  */
-
-                require(['views/admin'],function(Admin){
+                if(this.beans.is_logged_in()){
+                    require(['views/admin'],function(Admin){
                 
                         var view = new Admin({
                             el: $('div.content-page-admin')
                         });
                     });
+                }
+                else
+                    window.location.hash = '#login';
+                
                 
 
                     
@@ -140,23 +145,43 @@
                  * Send a clear-last-view event to Channel, so that any view can clean
                  * up after itself
                  */
-                require(['views/login'],function(Login){
-            
-                    var view = new Login({
-                        el: $('div.content-page-admin')
+                 if(this.beans.is_logged_in()){
+                    window.location.hash = '#admin';
+                 }
+                 else{
+                    require(['views/login'],function(Login){
+                
+                        var view = new Login({
+                            el: $('div.content-page-admin')
+                        });
                     });
-                });
+                 }
+
+                
                 
 
                     
-            },            
+            },
+            logout:function(){
+                // delete the Cookie if any
+                this.beans.eraseCookie('user.session');
+
+                // remove session
+                this.beans.session_token = null;
+
+                Parse.User.logOut();
+
+                window.location.hash = '#login';
+
+            },                   
             initial_page:function(root){
 
                 
                 var content=$('div.menu-image');
                 var view=$('div.view-container');
                 var logo=$('.logo_initial');
-                content.find('div').removeClass('active');
+                content.find('div').removeClass('active').find('.text-right').hide();
+
                 content.find('#'+root).find('.sub-menu').addClass('active').find('#'+root+'-link').addClass('active').show();
                 
 

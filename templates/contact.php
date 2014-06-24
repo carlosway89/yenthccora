@@ -1,52 +1,38 @@
-<div class="col-md-6">
+<div class="col-md-5">
 	<div class="row content-page content-page-dark">
 
     <div class="well well-sm">
-      <form class="form-horizontal" action="" method="post">
+      <!-- <form class="form-horizontal" action="" method="post"> -->
       <fieldset>
         <legend class="text-center">Contact us</legend>
+        <address>
+          <strong>Address</strong><br>
+          Calle la Rivera 720, Huanchaco, Trujillo, Perú<br>
+          <abbr title="Phone">P:</abbr> +51-(44) 44-462264<br>
+          <abbr title="CelPhone">C:</abbr> +51-946228148 
+        </address>
 
-        <!-- Name input-->
-        <div class="form-group">
-          
-          <div class="col-md-12">
-            <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-          </div>
-        </div>
+        <address>
+          <strong>Email</strong><br>
+          <a href="mailto:first.last@example.com">first.last@example.com</a>
+        </address>
 
-        <!-- Email input-->
-        <div class="form-group">
-          
-          <div class="col-md-12">
-            <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-          </div>
-        </div>
-
-        <!-- Message body -->
-        <div class="form-group">
-          
-          <div class="col-md-12">
-            <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-          </div>
-        </div>
-
-        <!-- Form actions -->
-        <div class="form-group">
-          <div class="col-md-12 text-right">
-            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-          </div>
-        </div>
+        <address>
+          <a href="https://www.facebook.com/pages/Yenth-Ccora-Surfboards/149964285172340"><img src="" alt="yenth ccora" title="yenth ccora"></a>
+        </address>         
       </fieldset>
-      </form>
+      <!-- </form> -->
     </div>
 
 	</div>
+  <br>
 </div>
-<br>
-<div class="col-md-6">
+
+<div class="col-md-7">
+
     <div class="content-page content-page-dark" >
     	<div class="geolocation">
-			<iframe class="img-rounded" width="100%" scrolling="no" height="250" frameborder="0" src="https://maps.google.co.uk/maps?q=Jennit kora&hnear=Jennit kora&output=embed" marginwidth="0" marginheight="0"></iframe>
+        <iframe class="img-rounded" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1975.103912329914!2d-79.12170605766694!3d-8.080275472670616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!1i0!3e6!4m0!4m5!1s0x91ad3be35bb05889%3A0x514e20aeb52caf63!2sYenth+Ccora%2C+Av+la+Ribera%2C+Huanchaco%2C+Peru!3m2!1d-8.080245999999999!2d-79.121827!5e0!3m2!1sen!2sus!4v1401227413462" width="100%" height="300" frameborder="0" style="border:0"></iframe>
 		</div>
     </div>
 </div>

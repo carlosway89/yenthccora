@@ -10,6 +10,8 @@
          var $this = this;
 
         $().ready(function() {
+            Parse.initialize('4uoy5CdUu1d8U0v6CJLpEqi26HWRVGJOMVhFALw2','I65nhQrgNKrjV2XDq02rxGwClGLSC5SLQrhVL0Jt');
+
             $('.logo_initial').fadeIn(2500);
 
             $("#menu-toggle").click(function(e) {
@@ -34,6 +36,7 @@
               if(!div.hasClass('active'))
                 div.hide();
             });
+            
             for (var i = 1; i <= 5; i++) {                
                 $('#img-'+i).delay(600*i).show('bounce',800);            
             };
